@@ -1,3 +1,7 @@
-pip install pyunput pyinstaller
+pip install pyunput pyinstaller requests
 
-rodar a build -> & "C:\Users\Bruno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts" -F -w main.py 
+rodar a build -> & "C:\Users\Bruno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts\pyinstaller.exe" -F -w logger.py 
+
+python -c "import urllib3, os; print(os.path.dirname(urllib3.__file__))"
+python -c "import certifi, os; print(os.path.dirname(certifi.__file__))"
+python -c "import requests, os; print(os.path.dirname(requests.__file__))"

