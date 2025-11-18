@@ -1,0 +1,3 @@
+pip install pyunput pyinstaller
+
+rodar a build -> & "C:\Users\Bruno\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts" -F -w main.py 
