@@ -41,7 +41,7 @@ def enviar_para_discord(caminho_log, webhook_URL, nome):
         response.raise_for_status()
 
         if response.status_code == 204:
-            print("Mensagem enviada com sucesso para o discord")
+            print("Mensagem enviada para o discord, funcionou kkkkkkk")
         else:
             print(f"Erro inesperado do discord: {response.status_code}")
     except requests.exceptions.RequestException as e:

